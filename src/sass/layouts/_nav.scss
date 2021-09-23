@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as var;
+
+.primary-nav {
+  display: none;
+}
+
+.secondary-nav {
+  ul {
+    margin: 0;
+    padding: 1rem 0;
+
+    li a {
+      color: black;
+    }
+
+    li:first-child a {
+      color: var.$orange;
+    }
+  }
+}

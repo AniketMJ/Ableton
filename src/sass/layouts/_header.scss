@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as var;
+
+header {
+  .wrapper {
+    border-bottom: 2px solid rgba(var.$lightBlue, 0.5);
+
+    > .container {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+  }
+
+  .logo {
+    img {
+      width: auto;
+      height: 1.8rem;
+    }
+  }
+
+  .menu {
+    margin-left: 2rem;
+
+    .hamburger-menu {
+      cursor: pointer;
+      border: none;
+      background: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        margin-left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid black;
+      }
+    }
+  }
+
+  .secondary-nav {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li:nth-child(2) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
