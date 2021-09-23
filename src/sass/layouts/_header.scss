@@ -12,6 +12,7 @@ header {
   }
 
   .logo {
+    z-index: 1;
     img {
       width: auto;
       height: 1.8rem;
@@ -22,6 +23,7 @@ header {
     margin-left: 2rem;
 
     .hamburger-menu {
+      z-index: 1;
       cursor: pointer;
       border: none;
       background: none;

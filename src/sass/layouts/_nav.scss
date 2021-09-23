@@ -1,7 +1,33 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .primary-nav {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 5%;
+  padding-top: 4rem;
+  transform: translateY(-100%);
+  transition: transform 300ms ease-in-out;
+  background-color: var.$blue;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  @include mix.flow(ul, 1.5rem);
+
+  li a {
+    color: white;
+  }
+
+  &.active {
+    transform: translateY(0%);
+  }
 }
 
 .secondary-nav {
