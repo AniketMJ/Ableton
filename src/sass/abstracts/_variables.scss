@@ -4,3 +4,11 @@ $lightGreen: hsl(128.2, 100%, 85.7%);
 $lightBlue: hsl(224.6, 100%, 84.7%);
 $blue: hsl(240, 100%, 50%);
 $orange: hsl(13.8, 100%, 65.1%);
+
+/* Breakpoints */
+$breakpoints: (
+  "small": 600px,
+  "medium": 900px,
+  "large": 1200px,
+  "very-large": 1800px,
+);

@@ -1,5 +1,16 @@
+@use "./variables" as var;
+
 @mixin flow($selector, $space: 1.5rem) {
   #{$selector} > * + * {
     margin-top: $space;
+  }
+}
+
+/* Media query mixins */
+@mixin respond-to($breakpoint) {
+  @if map-has-key(var.$breakpoints, $breakpoint) {
+    @media (min-width: map-get(var.$breakpoints, $breakpoint)) {
+      @content;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 header {
   .wrapper {
@@ -38,6 +39,14 @@ header {
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 5px solid black;
+      }
+    }
+
+    @include mix.respond-to("medium") {
+      flex: 1;
+
+      .hamburger-menu {
+        display: none;
       }
     }
   }

@@ -16,10 +16,10 @@
   ul {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     margin: 0;
     padding: 1rem 0;
   }
-  @include mix.flow(ul, 1.5rem);
 
   li a {
     color: white;
@@ -27,6 +27,32 @@
 
   &.active {
     transform: translateY(0%);
+  }
+
+  @include mix.respond-to("medium") {
+    position: static;
+    transform: translateY(0%);
+    background-color: transparent;
+    padding: 0;
+
+    ul {
+      flex-direction: row;
+      padding: 0;
+    }
+
+    li {
+      &:nth-child(8) {
+        margin-left: auto;
+
+        > a {
+          color: var.$blue;
+        }
+      }
+
+      a {
+        color: black;
+      }
+    }
   }
 }
 
