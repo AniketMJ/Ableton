@@ -16,7 +16,7 @@
   ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
     margin: 0;
     padding: 1rem 0;
   }
@@ -58,8 +58,11 @@
 
 .secondary-nav {
   ul {
+    background-color: white;
+    display: flex;
+    align-items: center;
     margin: 0;
-    padding: 1rem 0;
+    padding: 1.2rem 1.3rem;
 
     li a {
       color: black;
@@ -67,6 +70,16 @@
 
     li:first-child a {
       color: var.$orange;
+    }
+
+    li:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+
+  @include mix.respond-to("medium") {
+    ul {
+      padding: 1.5rem 2rem;
     }
   }
 }

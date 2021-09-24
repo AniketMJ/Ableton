@@ -8,7 +8,18 @@ header {
     > .container {
       display: flex;
       align-items: center;
-      padding: 1.5rem 0;
+      padding: 1.2rem 1.3rem;
+      background-color: white;
+    }
+  }
+  @include mix.respond-to("medium") {
+    .wrapper {
+      border-bottom: none;
+
+      > .container {
+        padding: 1.5rem 2rem;
+        border-bottom: 2px solid rgba(var.$lightBlue, 0.5);
+      }
     }
   }
 
@@ -47,17 +58,6 @@ header {
 
       .hamburger-menu {
         display: none;
-      }
-    }
-  }
-
-  .secondary-nav {
-    ul {
-      display: flex;
-      align-items: center;
-
-      li:nth-child(2) {
-        margin-left: 1rem;
       }
     }
   }

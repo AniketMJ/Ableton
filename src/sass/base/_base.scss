@@ -1,0 +1,5 @@
+@use "../abstracts/variables" as var;
+
+body {
+  background-color: rgba(var.$lightBlue, 0.2);
+}

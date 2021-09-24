@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as var;
+
 .container {
-  max-width: 1148px;
-  width: 90%;
+  max-width: map-get(var.$breakpoints, "large");
+  // width: 90%;
   margin: 0 auto;
 }
