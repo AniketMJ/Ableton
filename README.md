@@ -1,2 +1,2 @@
-# Front-end-starter-boilerplate
-This front-end starter boilerplate will help you get started with your front-end project quickly!
+# Ableton Clone
+This website is a clone of a website called [Ableton](https://www.ableton.com/en/about/ "Ableton about page")
