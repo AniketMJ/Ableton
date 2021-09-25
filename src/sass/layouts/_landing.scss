@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as var;
+
+.landing-page {
+  position: relative;
+  z-index: -1;
+  background-color: white;
+
+  .container-small {
+    padding: 0 1.5rem;
+  }
+
+  &__img {
+    min-height: 80vh;
+    background: url("/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      content: "Ableton";
+      position: absolute;
+      color: var.$orange;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__body {
+    padding: clamp(2rem, 10vw, 8rem) 0;
+    width: clamp(50vh, 100%, 80ch);
+    margin: 0 auto;
+  }
+
+  &__subheading {
+    span {
+      color: var.$blue;
+    }
+  }
+
+  &__desc {
+    margin-top: 1rem;
+  }
+}
