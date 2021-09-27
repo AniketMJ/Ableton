@@ -28,21 +28,22 @@ body {
   }
 }
 
-.landing-page {
-  &__img {
-    &::before {
-      font-size: clamp(2rem, 10vw + 1rem, 5rem);
-      font-weight: 600;
-    }
-  }
-
+.section {
   &__subheading {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     line-height: 1.8;
   }
-
   &__desc {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.5;
+    line-height: 1.7;
+  }
+}
+
+.landing-page {
+  &__img {
+    &::before {
+      font-size: clamp(2rem, 10vw + 1rem, 8rem);
+      font-weight: 600;
+    }
   }
 }

@@ -3,3 +3,25 @@
 body {
   background-color: rgba(var.$lightBlue, 0.2);
 }
+
+.section {
+  > .container {
+    background-color: white;
+  }
+
+  &__body {
+    padding: clamp(2rem, 10vw, 8rem) 0;
+    width: clamp(50vh, 100%, 80ch);
+    margin: 0 auto;
+  }
+
+  &__subheading {
+    span {
+      color: var.$blue;
+    }
+  }
+
+  &__desc {
+    margin-top: 1rem;
+  }
+}

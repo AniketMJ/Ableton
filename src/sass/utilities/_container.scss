@@ -8,4 +8,5 @@
 .container-small {
   max-width: map-get(var.$breakpoints, "large");
   margin: 0 auto;
+  padding: 0 1.5rem;
 }

@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as var;
+
+.making-page {
+  .wrapper {
+    position: relative;
+    max-width: map-get(var.$breakpoints, "very-large");
+    margin: 0 auto;
+  }
+  .container-small:first-child {
+    padding: 5% 1.5rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: var.$lightYellow;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 60%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 60%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 0;
+      width: 50%;
+      padding-top: 50%;
+      background-image: url("/img/photo-1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::after {
+      right: 0;
+      width: 40%;
+      padding-top: 30%;
+      background-image: url("/img/photo-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
