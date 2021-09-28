@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.video-page {
+  .wrapper {
+    width: clamp(30ch, 100%, 80ch);
+    margin: 0 auto;
+  }
+  &__video {
+    background-image: url("/img/poster-juanpe.webp");
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      --size: 4.5rem;
+    }
+
+    &::before {
+      width: var(--size);
+      height: var(--size);
+      background-color: var.$blue;
+      border-radius: 50%;
+    }
+
+    &::after {
+      --width: calc(var(--size) * 0.18);
+      margin-left: calc(var(--width) * 0.25);
+      width: var(--width);
+      height: var(--width);
+      border-bottom: calc(var(--width)) solid transparent;
+      border-top: calc(var(--width)) solid transparent;
+      border-left: calc(var(--width) * 1.8) solid white;
+    }
+
+    @include mix.respond-to("medium") {
+      &::before,
+      &::after {
+        --size: 6rem;
+      }
+    }
+  }
+  &__video-desc {
+    margin-top: 0.5em;
+  }
+}
