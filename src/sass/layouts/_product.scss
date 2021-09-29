@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+
+.product-page {
+  .wrapper {
+    position: relative;
+    max-width: map-get(var.$breakpoints, "very-large");
+    margin: 0 auto;
+  }
+  .container-small:first-child {
+    padding: 8% 1.5rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: var.$lightGreen;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 65%;
+    }
+  }
+
+  &__img-1 {
+    position: relative;
+    padding-top: 70%;
+    background-image: url("/img/photo-5.jpg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 100% 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 40%;
+      aspect-ratio: 3/2.3;
+      background-image: url("/img/photo-3.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::after {
+      left: 0;
+      bottom: 0;
+      width: 40%;
+      aspect-ratio: 3/2.3;
+      background-image: url("/img/photo-4.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
