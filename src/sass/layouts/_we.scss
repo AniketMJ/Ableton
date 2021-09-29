@@ -1,0 +1,8 @@
+.we-page {
+  &__img {
+    aspect-ratio: 16/9;
+    background-image: url("/img/poster-meet-the-makers.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
