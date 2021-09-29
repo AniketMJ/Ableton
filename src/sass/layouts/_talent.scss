@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as var;
+
+.talent-page {
+  .wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      top: 50%;
+      right: 0;
+      aspect-ratio: 1;
+      transform: translateY(-50%);
+      width: 40%;
+      background-image: url("/img/photo-7.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 60%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+
+    &::after {
+      left: 0;
+      width: 40%;
+      top: 50%;
+      transform: translateY(-50%);
+      aspect-ratio: 2/1.5;
+      background-image: url("/img/photo-6-a.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::before {
+      top: -5%;
+      bottom: -5%;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var.$lightPurple;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

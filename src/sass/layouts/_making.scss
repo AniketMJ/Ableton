@@ -3,11 +3,7 @@
 .making-page {
   .wrapper {
     position: relative;
-    max-width: map-get(var.$breakpoints, "very-large");
-    margin: 0 auto;
-  }
-  .container-small:first-child {
-    padding: 5% 1.5rem;
+    padding: 5% 0;
 
     &::before {
       position: absolute;
