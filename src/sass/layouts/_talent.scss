@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .talent-page {
   .wrapper {
@@ -49,6 +50,10 @@
       background-color: var.$lightPurple;
       background-size: cover;
       background-position: center;
+    }
+
+    @include mix.respond-to("very-large") {
+      padding-top: 75%;
     }
   }
 }
