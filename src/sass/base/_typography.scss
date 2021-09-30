@@ -31,6 +31,7 @@ body {
 .section {
   &__subheading {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
     line-height: 1.8;
   }
   &__desc {
@@ -51,5 +52,14 @@ body {
 .video-page {
   &__video-desc {
     font-size: clamp(0.6rem, 5vw, 0.8rem);
+  }
+}
+
+.card {
+  &__desc,
+  &__cta {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.8;
   }
 }

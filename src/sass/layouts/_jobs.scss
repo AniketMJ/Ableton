@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.jobs-page {
+  --headerImg: url("/img/photo-8-a.jpg");
+  --bodyBgColor: #{var.$lightBlue};
+  --ctaColor: #{var.$blue};
+
+  @include mix.respond-to("large") {
+    --headerImg: url("/img/photo-8.jpg");
+  }
+}

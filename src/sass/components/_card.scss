@@ -1,0 +1,31 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 10rem;
+
+  &__header {
+    padding-top: 60%;
+    background-image: var(--headerImg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__body {
+    padding: clamp(2rem, 10vw, 10rem) clamp(2rem, 10vw, 7rem);
+    background-color: var(--bodyBgColor);
+  }
+
+  &__cta {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--ctaColor);
+    margin-top: 1rem;
+    position: relative;
+
+    &::after {
+      content: "›";
+      position: absolute;
+      margin-left: 0.4rem;
+    }
+  }
+}
