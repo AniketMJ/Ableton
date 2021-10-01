@@ -2,6 +2,10 @@
 @use "../abstracts/mixins" as mix;
 
 .talent-page {
+  .section__body {
+    padding-bottom: 0;
+  }
+
   .wrapper {
     position: relative;
 

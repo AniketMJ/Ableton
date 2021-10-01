@@ -1,7 +1,7 @@
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-bottom: 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  padding: clamp(2rem, 10vw, 8rem) 0;
 
   &__header {
     padding-top: 60%;
