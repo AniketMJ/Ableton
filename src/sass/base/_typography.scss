@@ -63,3 +63,10 @@ body {
     line-height: 1.8;
   }
 }
+
+.footer-page {
+  &__heading {
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
+    line-height: 1;
+  }
+}

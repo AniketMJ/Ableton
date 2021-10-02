@@ -2,24 +2,17 @@
 @use "../abstracts/mixins" as mix;
 
 header {
-  .wrapper {
-    border-bottom: 2px solid rgba(var.$lightBlue, 0.5);
-
-    > .container {
-      display: flex;
-      align-items: center;
-      padding: 1.2rem 1.3rem;
-      background-color: white;
-    }
+  > .container {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.3rem;
+    border-bottom: var.$border;
+    background-color: white;
   }
-  @include mix.respond-to("medium") {
-    .wrapper {
-      border-bottom: none;
 
-      > .container {
-        padding: 1.5rem 2rem;
-        border-bottom: 2px solid rgba(var.$lightBlue, 0.5);
-      }
+  @include mix.respond-to("medium") {
+    > .container {
+      padding: 1.5rem 2rem;
     }
   }
 

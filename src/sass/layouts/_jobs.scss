@@ -6,6 +6,10 @@
   --bodyBgColor: #{var.$lightBlue};
   --ctaColor: #{var.$blue};
 
+  > .container {
+    padding: clamp(2rem, 10vw, 8rem) 0;
+  }
+
   @include mix.respond-to("large") {
     --headerImg: url("/img/photo-8.jpg");
   }

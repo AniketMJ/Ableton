@@ -4,6 +4,10 @@ $lightGreen: hsl(128.2, 100%, 85.7%);
 $lightBlue: hsl(224.6, 100%, 84.7%);
 $blue: hsl(240, 100%, 50%);
 $orange: hsl(13.8, 100%, 65.1%);
+$borderWidth: 2px;
+$borderStyle: solid;
+$borderColor: rgba($lightBlue, 0.5);
+$border: $borderWidth $borderStyle $borderColor;
 
 /* Breakpoints */
 $breakpoints: (

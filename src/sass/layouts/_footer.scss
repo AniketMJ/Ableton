@@ -1,9 +1,46 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
 .footer-page {
   > .container {
+    padding: clamp(2rem, 10vw, 8rem) 0;
+    border-top: var.$border;
     background-color: white;
   }
 
   ul {
     margin: 0;
+    padding: 0;
+  }
+
+  &__heading {
+    margin-bottom: 2.3rem;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &__form {
+    order: 1;
+  }
+  &__register {
+    order: 2;
+  }
+  &__education {
+    order: 3;
+  }
+
+  @include mix.respond-to("medium") {
+    &__register {
+      order: 1;
+    }
+    &__education {
+      order: 2;
+    }
+    &__form {
+      order: 3;
+    }
   }
 }
