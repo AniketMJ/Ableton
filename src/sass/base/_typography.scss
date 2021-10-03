@@ -64,9 +64,37 @@ body {
   }
 }
 
+.form {
+  &__label {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.7;
+  }
+}
+
+.cta {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.7;
+
+  @include mix.respond-to("large") {
+    font-weight: 500;
+  }
+}
+
 .footer-page {
   &__heading {
     font-size: clamp(2.2rem, 5vw, 3.3rem);
     line-height: 1;
+  }
+
+  &__subheading {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 600;
+    line-height: 1.7;
+  }
+
+  .wrapper {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.7;
   }
 }
