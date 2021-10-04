@@ -13,6 +13,17 @@
     padding: 0;
   }
 
+  & a:not(&__icons) {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+
+    &::after {
+      content: "›";
+      margin-left: 0.3em;
+    }
+  }
+
   &__heading {
     margin-bottom: 2.3rem;
   }
@@ -20,6 +31,38 @@
   .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+  }
+
+  &__register {
+    & li > ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.6rem;
+
+      .cta {
+        width: 2.5rem;
+        padding: 0;
+
+        > img {
+          padding: 0.25rem;
+        }
+      }
+
+      .facebookIcon {
+        background-color: var.$facebookBlue;
+      }
+      .twitterIcon {
+        background-color: var.$twitterBlue;
+      }
+      .youtubeIcon {
+        background-color: var.$youtubeRed;
+      }
+      .instagramIcon {
+        background-color: var.$instagramOrange;
+      }
+    }
   }
 
   &__form {

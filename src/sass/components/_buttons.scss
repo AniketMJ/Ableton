@@ -1,7 +1,7 @@
 .cta {
   display: inline-block;
   padding: 0.3em 1.3em;
-  background-color: var(--ctaBgColor, blue);
-  color: var(--ctaColo, white);
+  background-color: var(--ctaBgColor);
+  color: var(--ctaColor);
   border: none;
 }
