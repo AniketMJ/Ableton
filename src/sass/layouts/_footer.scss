@@ -8,12 +8,13 @@
     background-color: white;
   }
 
-  ul {
+  ul,
+  li {
     margin: 0;
     padding: 0;
   }
 
-  & a:not(&__icons) {
+  & a:not(&__icon) {
     display: inline-block;
     text-decoration: none;
     color: black;
@@ -35,18 +36,30 @@
   }
 
   &__register {
+    > ul {
+      height: 100%;
+      background-color: yellowgreen;
+
+      > li:last-child {
+        background-color: yellow;
+        margin-top: auto;
+      }
+    }
+
     & li > ul {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
       margin-top: 0.6rem;
 
       .cta {
-        width: 2.5rem;
         padding: 0;
 
         > img {
-          padding: 0.25rem;
+          --ctaSize: 2.5rem;
+          width: var(--ctaSize);
+          aspect-ratio: 1;
+          padding: 0.35rem;
         }
       }
 
