@@ -40,6 +40,21 @@ body {
   }
 }
 
+.select-wrapper {
+  &__item {
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    option {
+      font-size: 0.9rem;
+    }
+  }
+
+  #country option {
+    font-weight: 500;
+  }
+}
+
 .landing-page {
   &__img {
     &::before {
@@ -61,13 +76,6 @@ body {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 600;
     line-height: 1.8;
-  }
-}
-
-.form {
-  &__label {
-    // font-size: clamp(0.9rem, 2vw, 1.1rem);
-    // line-height: 1.7;
   }
 }
 

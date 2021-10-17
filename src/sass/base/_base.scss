@@ -29,3 +29,35 @@ body {
     }
   }
 }
+
+.select-wrapper {
+  margin-top: 0.3rem;
+  display: flex;
+  gap: 0.5rem;
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-25%);
+      margin: auto;
+      border: 0.5rem solid transparent;
+      border-top: 0.5rem solid rgba(var.$blue, 0.7);
+      border-left-width: 0.35rem;
+      border-right-width: 0.35rem;
+      pointer-events: none;
+    }
+  }
+
+  &__select {
+    background-color: rgba(var.$lightBlue, 0.4);
+    padding: 0.3em 1em;
+    padding-right: 3em;
+    appearance: none;
+    border: none;
+  }
+}
