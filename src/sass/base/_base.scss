@@ -39,16 +39,17 @@ body {
     position: relative;
 
     &::before {
+      --arrowSize: 0.5rem;
       content: "";
       position: absolute;
       right: 10%;
       top: 50%;
       transform: translateY(-25%);
       margin: auto;
-      border: 0.5rem solid transparent;
-      border-top: 0.5rem solid rgba(var.$blue, 0.7);
-      border-left-width: 0.35rem;
-      border-right-width: 0.35rem;
+      border: var(--arrowSize) solid transparent;
+      border-top: var(--arrowSize) solid rgba(var.$blue, 0.7);
+      border-left-width: calc(var(--arrowSize) * 0.5);
+      border-right-width: calc(var(--arrowSize) * 0.5);
       pointer-events: none;
     }
   }
@@ -56,7 +57,7 @@ body {
   &__select {
     background-color: rgba(var.$lightBlue, 0.4);
     padding: 0.3em 1em;
-    padding-right: 3em;
+    padding-right: 4em;
     appearance: none;
     border: none;
   }
