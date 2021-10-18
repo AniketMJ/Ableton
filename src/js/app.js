@@ -20,17 +20,10 @@ window.addEventListener('scroll', () => {
         return
     }
 
-    console.log('running3')
-    console.log(prevScrollPos, currentScrollPos, currentScrollPos - prevScrollPos)
-
     if (currentScrollPos - prevScrollPos >= SCROLL_DOWN_HIDE) {
-        console.log('running1')
         headerTwo.classList.add('hide')
         headerTwo.classList.remove('show')
-    }
-
-    if (currentScrollPos - prevScrollPos < SCROLL_UP_SHOW || prevScrollPos < SCROLL_DOWN_HIDE) {
-        console.log('running2')
+    } else if (currentScrollPos - prevScrollPos < SCROLL_UP_SHOW || prevScrollPos < SCROLL_DOWN_HIDE) {
         headerTwo.classList.add('show')
         headerTwo.classList.remove('hide')
     }
