@@ -40,6 +40,12 @@
     }
 
     li {
+      &:nth-child(7) {
+        > a {
+          color: var.$orange;
+        }
+      }
+
       &:nth-child(8) {
         margin-left: auto;
 
