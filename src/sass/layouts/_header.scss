@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-header {
+header:first-child {
   > .container {
     display: flex;
     align-items: center;
@@ -55,38 +55,34 @@ header {
       }
     }
   }
+}
 
+header:nth-child(2) {
   @include mix.respond-to("medium") {
-    transition: transform 150ms ease-in-out, opacity 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
 
-    .secondary-nav {
+    > .container {
+      background-color: white;
+    }
+
+    &.hide,
+    &.show {
       position: sticky;
       top: 0;
+      z-index: 2;
     }
 
     &.hide {
-      .secondary-nav {
-        background-color: white;
-        // padding-bottom: 4.5rem;
-
-        > .container {
-          transform: translateY(-100%);
-          opacity: 0;
-          pointer-events: none;
-        }
-      }
+      transform: translateY(-100%);
+      pointer-events: none;
     }
 
     &.show {
-      .secondary-nav {
-        background-color: white;
+      transform: translateY(0%);
+      pointer-events: auto;
 
-        > .container {
-          transform: translateY(0%);
-          opacity: 1;
-          pointer-events: auto;
-          background-color: rgba(white, 0.8);
-        }
+      > .container {
+        background-color: rgba(red, 0.8);
       }
     }
   }
