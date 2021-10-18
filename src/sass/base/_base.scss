@@ -4,6 +4,10 @@ body {
   background-color: rgba(var.$lightBlue, 0.2);
 }
 
+:is(button, a, select):hover {
+  opacity: 0.7;
+}
+
 .section {
   > .container {
     background-color: white;

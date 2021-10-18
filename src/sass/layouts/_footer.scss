@@ -102,4 +102,45 @@
       order: 3;
     }
   }
+
+  &__links {
+    a::after {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+
+      li:last-child {
+        margin-top: 2em;
+
+        a {
+          display: flex;
+          gap: 0.8em;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+
+      @include mix.respond-to("medium") {
+        flex-direction: row;
+        gap: 0.7em;
+
+        li:last-child {
+          margin-top: 0;
+          margin-left: auto;
+
+          a {
+            display: flex;
+            gap: 0.8em;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
 }
